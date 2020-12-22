@@ -48,7 +48,7 @@ def formula_ops(_lines):
 # The support function for image_ops. It will take in a matched object and make sure they are competible
 def rename_image_ref(m, original=True):
     global image_folder_path
-    # image_folder_path.name = re.sub("./","",os.path.dirname (m.group(2) ))
+    image_path = re.sub("./","",os.path.dirname (m.group(2) ))
     # print(os.path.dirname (m.group(2) ))
     # print(image_folder_path.name)
     # if not Path(m.group(1)).is_file():
@@ -69,9 +69,9 @@ def rename_image_ref(m, original=True):
             image_ref_name = Path(m.group(1)).name
     # print(image_folder_path.name)
     if original:
-        return "!["+m.group(2)+"]("+GITHUB_REPO_PREFIX+str(image_folder_path.name)+"/"+image_ref_name+")"
+        return "!["+m.group(2)+"]("+GITHUB_REPO_PREFIX+str(image_path)+"/"+image_ref_name+")"
     else:
-        return '<img src="'+GITHUB_REPO_PREFIX+str(image_folder_path.name)+"/" +image_ref_name +'"'
+        return '<img src="'+GITHUB_REPO_PREFIX+str(image_path)+"/" +image_ref_name +'"'
 
 # Search for the image links which appear in the markdown file. It can handle two types: ![]() and <img src="LINK" alt="CAPTION" style="zoom:40%;" />.
 # The second type is mainly for those images which have been zoomed.
