@@ -15,7 +15,7 @@ Make sure you log into the saleforce and stop in the queue you want to monitor
 * Please find 3 important parameters in headers.
 
 Please see the picture below to know how to get cookies.
-![cookies](./img/02.png)
+![cookies](./img/01.jpg)
 
 Please see the picture below to know how to get loadID(Orange circle),fwuid(Green circle) and token(Blue circle).
 ![token](./img/03.png)
