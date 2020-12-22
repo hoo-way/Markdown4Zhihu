@@ -26,6 +26,7 @@ def process_for_zhihu():
     if args.compress:
         reduce_image_size()
     with open(str(args.input), 'rb') as f:
+        print(str(args.input))
         s = f.read()
         chatest = chardet.detect(s)
     print(chatest)
