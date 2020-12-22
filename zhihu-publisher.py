@@ -50,7 +50,7 @@ def rename_image_ref(m, original=True):
     global image_folder_path
     # image_folder_path
     print(m.group(2) )
-    print(os.path.basename (m.group(2) ))
+    print(os.path.abspath (m.group(2) ))
     # print(image_folder_path.name)
     # if not Path(m.group(1)).is_file():
     #     return m.group(0)
