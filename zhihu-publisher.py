@@ -48,6 +48,8 @@ def formula_ops(_lines):
 # The support function for image_ops. It will take in a matched object and make sure they are competible
 def rename_image_ref(m, original=True):
     global image_folder_path
+    # image_folder_path
+    print(os.path.basename (m.group(2) ))
     # print(image_folder_path.name)
     # if not Path(m.group(1)).is_file():
     #     return m.group(0)
